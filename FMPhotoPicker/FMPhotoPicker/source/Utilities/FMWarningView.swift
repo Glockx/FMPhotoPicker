@@ -25,7 +25,7 @@ class FMWarningView {
     static let shared = FMWarningView()
     
     private init() {
-        let rootVC = (UIApplication.shared.delegate?.window??.rootViewController)!
+        let rootVC = UIApplication.shared.windows.first!.rootViewController
         
         self.containerView = UIView(frame: rootVC.view.frame)
         self.containerView.backgroundColor = .clear
